@@ -7,7 +7,7 @@ let arr = [];
 for(let r=0; r< jumlahRow; r++){
     let row = [];
     for(let col =0; col < jumlahCol; col++){
-        row.push(alphabet[Math.floor(Math.random()*25)]);
+        row.push(alphabet[Math.round(Math.random()*25)]);
     }
     arr.push(row);
 }
