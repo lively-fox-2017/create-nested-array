@@ -1,10 +1,10 @@
 function createNestedArray(jumlahRow, jumlahCol){
-	let str = "abcdefghijklmnopqrstuvwxyz".split("");
+	let str = "abcdefghijklmnopqrstuvwxyz";
 	let arrLuar = [];
 	for(let row=0;row<jumlahRow;row++){
 		let arrDalem = [];
 		for(let col=0;col<jumlahCol;col++){
-			arrDalem.push(str[Math.floor(Math.random()*25)]);
+			arrDalem.push(str[Math.floor(Math.random()*26)]);
 		}
 		arrLuar.push(arrDalem);
 	}
