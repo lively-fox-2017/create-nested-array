@@ -1,21 +1,29 @@
 'use strict';
 
-function createNestedArr(jumlahRow, jumlahCol){
-	let x = 'abcdefghijklmnopqrstuvwxyz';
-	
-	let row = [];
+var arr = [];
 
-	for(let i = 0; i < jumlahRow; i++){
-		let kolom = [];
-		for(let j = 0; j < jumlahCol; j++){
-			kolom.push(x[Math.floor((Math.random() * x.length))])
-		}
-		row.push(kolom)
+function createObj(name, phase, gender){
+	var obj = {
+		'name' : name,
+		'phase' : phase,
+		'gender' : gender
 	}
 
-	return row;
-	
+	return arr.push(obj);
+
 }
 
-console.log(createNestedArr(5, 3))
-console.log(createNestedArr(4, 4))
+createObj('Akbar', 1, 'male')
+createObj('Icha', 1, 'female')
+
+console.log(arr)
+
+function getData(name){
+	for(var i = 0; i <  arr.length; i++){
+		if(arr[i].name === name){
+			return arr[i]
+		}
+	}
+}
+
+console.log(getData('Icha'))
